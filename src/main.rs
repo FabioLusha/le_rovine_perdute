@@ -1,6 +1,12 @@
-use node::{self, id_giver};
+use le_rovine_perdute_rs::{Tree, node};
 
 fn main() {
-    let id_creater = node::Id_giver::new();
-    let nod = node::Node::new(id_creater.get_id, 0);
+    println!("start");
+    parse_tree("tmp.xml");
+}
+
+fn parse_tree(file_path: &str) {
+    println!("Enter parsing");
+    le_rovine_perdute_rs::parse_map(file_path);    
+    println!("finishing parsing");
 }
